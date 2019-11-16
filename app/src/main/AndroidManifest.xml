@@ -2,17 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.loginapp.creativeteam.tn.loginapplication">
 
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality.
-    -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -21,7 +10,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
-
+        <activity android:name=".ServerHome"></activity>
+        <activity android:name=".UserHome" />
+        <activity android:name=".InvestorDisplay" />
+        <activity android:name=".entraprenure1" />
+        <activity android:name=".User_profile_activity" />
+        <activity android:name=".profile_server_click" />
+        <activity android:name=".ServerDisplay" />
+        <activity
+            android:name=".Investor"
+            android:parentActivityName=".Profile_user_click" />
+        <activity android:name=".Profile_user_click" />
+        <activity
+            android:name=".notify.Notify"
+            android:parentActivityName=".Profile_user_click" />
+        <activity android:name=".UsersDisplay" />
+        <activity
+            android:name=".Map2Activity"
+            android:label="@string/title_activity_map2" />
+        <activity android:name=".MapActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -30,15 +37,6 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
-        <activity
-            android:name=".Map2Activity"
-            android:label="@string/title_activity_map2"></activity>
-        <activity android:name=".MapActivity" />
-        <activity android:name=".EntraQuery" />
         <activity android:name=".UserQueryActivity" />
         <activity android:name=".prev_query" />
         <activity android:name=".ProfileActivity" />
@@ -50,11 +48,26 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignupActivity" />
+        <activity android:name=".firebase_login_signup.Loginactivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".QueryActivity" />
         <activity android:name=".Business1Activity" />
         <activity android:name=".ResetPasswordActivity" />
+        <activity
+            android:name=".firebase_login_signup.SignUpActivity"
+            android:label="@string/title_sign_up"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".BloqueryActivity"
+            android:label="@string/title_bloquery" />
+        <activity
+            android:name=".SingleQuestionActivity"
+            android:label="@string/title_single_question"
+            android:parentActivityName=".BloqueryActivity" />
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
         <meta-data
             android:name="com.parse.SERVER_URL"
             android:value="@string/back4app_server_url" />
@@ -64,6 +77,39 @@
         <meta-data
             android:name="com.parse.CLIENT_KEY"
             android:value="@string/back4app_client_key" />
+
+        <service
+            android:name=".notify.MyFirebaseInstanceIDService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".notify.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
     </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

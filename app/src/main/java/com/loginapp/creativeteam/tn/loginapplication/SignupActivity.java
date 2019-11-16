@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.loginapp.creativeteam.tn.loginapplication.firebase_login_signup.SignUpActivity;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -50,10 +51,11 @@ public class SignupActivity extends AppCompatActivity {
             progress.setMessage("Loading ...");
             progress.show();
             ParseUser user = new ParseUser();
-            user.setUsername(edEmail.getText().toString().trim());
+            user.setUsername(edName.getText().toString().trim());
             user.setEmail(edEmail.getText().toString().trim());
             user.setPassword(edPassword.getText().toString());
             user.put("name", edName.getText().toString().trim());
+            user.put("flag", "r");
             user.signUpInBackground(new SignUpCallback() {
 
 
@@ -62,7 +64,7 @@ public class SignupActivity extends AppCompatActivity {
                     progress.dismiss();
                     if (e == null) {
                         Toast.makeText(SignupActivity.this, "Welcome!", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(SignupActivity.this,prev_query.class);
+                        Intent intent = new Intent(SignupActivity.this, SignUpActivity.class);
                         startActivity(intent);
                         finish();
                     } else {

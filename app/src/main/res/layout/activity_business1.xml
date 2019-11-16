@@ -21,197 +21,189 @@
 
 
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/colorPrimary"
-                    android:gravity="center_horizontal"
-                    android:text="Business Details"
-                    android:paddingTop="60dp"
-                    android:textSize="25dp"
-                    android:textColor="@color/colorWhite"
-                    android:layout_marginBottom="100dp"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ebca0707"
+        android:gravity="center_horizontal"
+        android:text="Organization Details"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textAlignment="gravity"
+        android:paddingTop="30dp"
+        android:textSize="25dp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginBottom="20dp"
 
-                    />
-
-
-                <EditText
-                    android:id="@+id/cname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Company Name"
-                    android:background="@drawable/edittext_background"
-                    android:layout_marginBottom="25dp"
-                    android:padding="10dp"/>
-
-                <EditText
-                    android:id="@+id/cdate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="date"
-                    android:hint="Establised Date"
-                    android:background="@drawable/edittext_background"
-                    android:layout_marginBottom="25dp"
-                    android:padding="10dp"/>
+        />
 
 
+    <EditText
+        android:id="@+id/organization_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="textPersonName"
+        android:hint="Organization Name"
+        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="25dp"
+        android:padding="10dp"/>
 
-                <EditText
-                    android:id="@+id/caddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPostalAddress"
-                    android:hint="Physical Adress"
-                    android:background="@drawable/edittext_background"
-                    android:layout_marginBottom="25dp"
-                    android:padding="10dp"/>
-
-                <EditText
-                    android:id="@+id/cemail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textEmailAddress"
-                    android:hint="Email Address"
-                    android:background="@drawable/edittext_background"
-                    android:layout_marginBottom="25dp"
-                    android:padding="10dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/colorPrimary"
-                    android:gravity="center_horizontal"
-                    android:text="Company Basics"
-                    android:paddingTop="60dp"
-                    android:textSize="25dp"
-                    android:textColor="@color/colorWhite"
-                    android:layout_marginBottom="100dp"
-                    android:layout_marginTop="100dp"
-                    />
-
-
-                <EditText
-                    android:id="@+id/cdescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textLongMessage"
-                    android:hint="Description of Business"
-                    android:background="@drawable/edittext_background"
-                    android:layout_marginBottom="25dp"
-                    android:padding="10dp"/>
-
-                <EditText
-                    android:id="@+id/cproduct_description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textLongMessage"
-                    android:hint="Product Description"
-                    android:background="@drawable/edittext_background"
-                    android:layout_marginBottom="25dp"
-                    android:padding="10dp"/>
+    <EditText
+        android:id="@+id/ctype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginHorizontal="20dp"
+        android:hint="Type of Organization"
+        android:inputType="textLongMessage"
+        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="25dp"
+        android:padding="10dp"/>
 
 
 
-                <EditText
-                    android:id="@+id/ccore_team"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textLongMessage"
-                    android:hint="Core Team Details"
-                    android:background="@drawable/edittext_background"
-                    android:layout_marginBottom="25dp"
-                    android:padding="10dp"/>
+    <EditText
+        android:id="@+id/cmarket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textLongMessage"
+        android:layout_marginHorizontal="20dp"
+        android:hint="Marketing Strategy"
+        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="25dp"
+        android:padding="10dp"/>
 
-                <EditText
-                    android:id="@+id/cexpention"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textLongMessage"
-                    android:hint="Expention and Growth"
-                    android:background="@drawable/edittext_background"
-                    android:layout_marginBottom="25dp"
-                    android:padding="10dp"/>
+    <EditText
+        android:id="@+id/net_profit_mergin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="numberDecimal"
+        android:hint="Net Profit Margin"
+        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="25dp"
+        android:padding="10dp"/>
+    <EditText
+        android:id="@+id/gross_profit_mergin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="numberDecimal"
+        android:hint="Gross Profit Margin"
+        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="25dp"
+        android:padding="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ebca0707"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:text="Loan Criteria"
+        android:fontFamily="casual"
+        android:textAlignment="gravity"
+        android:paddingTop="30dp"
+        android:textSize="25dp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginBottom="20dp"
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="@color/colorPrimary"
-                    android:gravity="center_horizontal"
-                    android:text="Highlights"
-                    android:paddingTop="60dp"
-                    android:textSize="25dp"
-                    android:textColor="@color/colorWhite"
-                    android:layout_marginBottom="100dp"
-                    android:layout_marginTop="100dp"
-                    />
-
-
-                <EditText
-                    android:id="@+id/caward"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textLongMessage"
-                    android:hint="Awards and Certifications"
-                    android:background="@drawable/edittext_background"
-                    android:layout_marginBottom="25dp"
-                    android:padding="10dp"/>
-
-                <EditText
-                    android:id="@+id/cemployee"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberSigned"
-                    android:hint="Number of Employees"
-                    android:background="@drawable/edittext_background"
-                    android:layout_marginBottom="25dp"
-                    android:padding="10dp"/>
+        />
 
 
+    <EditText
+        android:id="@+id/field_of_interest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textLongMessage"
+        android:layout_marginHorizontal="20dp"
+        android:hint="Field of Interests"
+        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="25dp"
+        android:padding="10dp"/>
 
-                <EditText
-                    android:id="@+id/csales"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberDecimal"
-                    android:hint="Annual Sales"
-                    android:background="@drawable/edittext_background"
-                    android:layout_marginBottom="25dp"
-                    android:padding="10dp"/>
-
-                <EditText
-                    android:id="@+id/ctarget"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberDecimal"
-                    android:hint="Financial Tagets"
-                    android:background="@drawable/edittext_background"
-                    android:layout_marginBottom="25dp"
-                    android:padding="10dp"/>
+    <EditText
+        android:id="@+id/installment_criteria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="textLongMessage"
+        android:hint="Installment Criteria"
+        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="25dp"
+        android:padding="10dp"/>
 
 
 
-                <Button
-                    android:id="@+id/cnext_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_background"
-                    android:textColor="@color/colorWhite"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="15dp"
-                    android:text="Next"
-                    />
-        </TableLayout>
+    <EditText
+        android:id="@+id/installment_method"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginHorizontal="20dp"
+        android:inputType="textLongMessage"
+        android:hint="Installment Method"
+        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="25dp"
+        android:padding="10dp"/>
 
-        </ScrollView>
+    <EditText
+        android:id="@+id/loan_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Duration of Loan ..for example:2-6 years"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="25dp"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/loan_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Amount of Loan Range ..for example:12,000-60,000 tk"
+        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="25dp"
+        android:layout_marginHorizontal="20dp"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/loan_interest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Percentage of Loan Interest ..for example:12%-60%"
+        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="25dp"
+        android:layout_marginHorizontal="20dp"
+        android:padding="10dp"/>
+
+
+
+
+
+    <Button
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/cnext_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        android:text="Submit"
+        />
+</TableLayout>
+
+</ScrollView>

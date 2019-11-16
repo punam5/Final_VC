@@ -17,7 +17,7 @@ Button button1;
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserQueryActivity.this, EntraQuery.class);
+                Intent intent = new Intent(UserQueryActivity.this, entraprenure1.class);
                 startActivity(intent);
                 finish();
 

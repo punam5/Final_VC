@@ -13,16 +13,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="@color/colorPrimary"/>
+            android:background="@color/brown"/>
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="130dp"
+        <ImageView
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
             android:layout_height="130dp"
             android:padding="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="85dp"
-            android:background="@drawable/image_background"
-            android:src="@drawable/avatar" />
+            android:src="@drawable/virtual_white" />
     </RelativeLayout>
 
     <LinearLayout

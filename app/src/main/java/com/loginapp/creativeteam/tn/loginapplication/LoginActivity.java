@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.loginapp.creativeteam.tn.loginapplication.firebase_login_signup.Loginactivity;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
@@ -28,7 +29,9 @@ public class LoginActivity extends AppCompatActivity {
         edPassword = findViewById(R.id.edPassword);
 
         if(ParseUser.getCurrentUser()!=null){
-            Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+            ParseUser user = ParseUser.getCurrentUser();
+            user.put("flag", "l");
+            Intent intent = new Intent(LoginActivity.this, Loginactivity.class);
             startActivity(intent);
             finish();
         }
@@ -50,7 +53,9 @@ public class LoginActivity extends AppCompatActivity {
                     progress.dismiss();
                     if (parseUser != null) {
                         Toast.makeText(LoginActivity.this, "Welcome back!", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        ParseUser user = ParseUser.getCurrentUser();
+                        user.put("flag", "l");
+                        Intent intent = new Intent(LoginActivity.this, Loginactivity.class);
                         startActivity(intent);
                         finish();
                     } else {

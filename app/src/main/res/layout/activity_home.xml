@@ -72,6 +72,25 @@
             android:layout_marginBottom="15dp"
             android:text="navigation"
             android:onClick="logout"/>
+
+        <Button
+            android:id="@+id/button_ques"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/server"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="server" />
+        <Button
+            android:id="@+id/user_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="server" />
+
+
     </LinearLayout>
 
 

@@ -17,6 +17,9 @@ public class App extends Application {
                 .server(getString(R.string.back4app_server_url))
                 .build()
         );
+       /* ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+        installation.put("GCMSenderId", "577175213376");
+        installation.saveInBackground();*/
 
         ParseInstallation.getCurrentInstallation().saveInBackground();
     }
