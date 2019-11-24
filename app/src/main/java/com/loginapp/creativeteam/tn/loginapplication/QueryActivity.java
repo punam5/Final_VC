@@ -58,7 +58,7 @@ public class QueryActivity extends Activity {
         bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QueryActivity.this, Map2Activity.class);
+                Intent intent = new Intent(QueryActivity.this, MapsActivity.class);
                 startActivity(intent);
                 finish();
             }

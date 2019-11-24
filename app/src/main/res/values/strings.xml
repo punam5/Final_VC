@@ -48,5 +48,6 @@
     <string name="title_bloquery">Questions Answers</string>
     <string name="title_activity_add_answer">Add Answer</string>
     <string name="title_activity_add_question">Add Question</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
