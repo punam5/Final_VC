@@ -14,8 +14,6 @@
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:textColor="@color/colorWhite"
-            android:fontFamily="casual"
-            android:textStyle="bold"
             android:text="Select Your Category"
             android:gravity="center_horizontal"
             android:paddingTop="90dp"
@@ -32,30 +30,19 @@
 
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/btn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="100dp"
             android:layout_marginBottom="20dp"
-            android:text="Innovation Investment"
-             />
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_background"
-            android:textColor="@color/colorWhite"
-            android:textStyle="bold"
-
-            android:layout_marginBottom="20dp"
-            android:text="Sentiment Analyzer"
+            android:text="Doctor"
             />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
@@ -63,20 +50,10 @@
             android:textStyle="bold"
 
             android:layout_marginBottom="20dp"
-            android:text="Map"
+            android:text="Patient"
             android:onClick="login"/>
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_background"
-            android:textColor="@color/colorWhite"
-            android:textStyle="bold"
 
-            android:layout_marginBottom="20dp"
-            android:text="Health"
-            android:onClick="login"/>
 
     </LinearLayout>
 

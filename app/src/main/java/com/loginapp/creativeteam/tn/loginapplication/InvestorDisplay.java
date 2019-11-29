@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -93,47 +95,44 @@ public class InvestorDisplay extends AppCompatActivity  {
                         e.printStackTrace();
                     }
 
-                    Iterator<?> keys1 = jsonObject2.keys();
-                    while( keys1.hasNext() ) {
 
-                        String key1 = (String) keys1.next();
-                        JSONObject jsonObject3 = null;
-                        try {
-                            jsonObject3 = jsonObject2.getJSONObject(key1);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                    if (jsonObject2==null) {
+                        Toast.makeText(getApplicationContext(), "No investor Found ", Toast.LENGTH_LONG).show();
+
+                    } else {
+                        Iterator<?> keys1 = jsonObject2.keys();
+                        while (keys1.hasNext()) {
+
+                            String key1 = (String) keys1.next();
+                            JSONObject jsonObject3 = null;
+                            try {
+                                jsonObject3 = jsonObject2.getJSONObject(key1);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+                            investor_name = jsonObject3.optString("investor_name", "no status");
+                            money = jsonObject3.optString("money", "no uid");
+                            interest = jsonObject3.optString("interest", "no uid");
+                            uid = jsonObject3.optString("uid", "no uid");
+                            objectid = jsonObject3.optString("objectid", "no status");
+
+
+                            listItem = new ListItemInvestor(investor_name, money, interest, uid, objectid, email);
+                            listItems.add(listItem);
+
                         }
 
 
+                        //singleParse+="\n\n\n"+"Name: "+jsonObject1.getString("name")+"\n"+
+                        // "Status: "+jsonObject1.optString("status","No status ")+"\n\n\n";
+                        //}
 
-
-
-                        investor_name=jsonObject3.optString("investor_name","no status");
-                        money=jsonObject3.optString("money","no uid");
-                        interest=jsonObject3.optString("interest","no uid");
-                        uid=jsonObject3.optString("uid","no uid");
-                        objectid=jsonObject3.optString("objectid","no status");
-
-
-
-                        listItem= new ListItemInvestor(investor_name,money,interest,uid,objectid,email);
-                        listItems.add(listItem);
-
+                        adapter = new ListShowAdapterInvestor(listItems, getApplicationContext());
+                        recyclerView.setAdapter(adapter);
                     }
-
-
-
-
-
-
-                    //singleParse+="\n\n\n"+"Name: "+jsonObject1.getString("name")+"\n"+
-                    // "Status: "+jsonObject1.optString("status","No status ")+"\n\n\n";
-                    //}
                 }
-                adapter=new ListShowAdapterInvestor(listItems,getApplicationContext());
-                recyclerView.setAdapter(adapter);
-
-
 
 
 

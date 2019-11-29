@@ -79,7 +79,18 @@ public class Question {
         setNumberOfAnswers(numberOfAnswers);
         setUserId(userId);
     }
-    public Question(String key, String questionString,String ask,String reply, long timeStamp, int numberOfAnswers,
+    public Question(String key, String questionString, String ask, String reply, long timeStamp, int numberOfAnswers,
+                    String userId) {
+        setQuestionId(key);;
+        setQuestionString(questionString);
+        setTimeStamp(timeStamp);
+        setNumberOfAnswers(numberOfAnswers);
+        setUserId(userId);
+        setAsk(ask);
+        setReply(reply);
+
+    }
+    public Question(String key, String questionString, String ask, long timeStamp, int numberOfAnswers,
                     String userId) {
         setQuestionId(key);;
         setQuestionString(questionString);

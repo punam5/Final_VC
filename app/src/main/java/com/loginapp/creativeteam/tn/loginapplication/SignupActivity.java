@@ -56,6 +56,7 @@ public class SignupActivity extends AppCompatActivity {
             user.setPassword(edPassword.getText().toString());
             user.put("name", edName.getText().toString().trim());
             user.put("flag", "r");
+
             user.signUpInBackground(new SignUpCallback() {
 
 

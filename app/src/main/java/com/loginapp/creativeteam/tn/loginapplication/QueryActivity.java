@@ -20,7 +20,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class QueryActivity extends Activity {
 
     Button business;
-    Button bt2;
+    Button button4;
+    Button bt2,bt3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,12 +35,8 @@ public class QueryActivity extends Activity {
                                             ParseUser parseUser = ParseUser.getCurrentUser();
                                             String flag = parseUser.getString("flag");
                                             String type = parseUser.getString("type");
-                                            if (flag.equals("r")) {
-                                                Intent intent = new Intent(QueryActivity.this, prev_query.class);
-                                                startActivity(intent);
-                                                finish();
-                                            }
-                                            else if(flag.equals("l") && type.equals("client")){
+
+                                             if(flag.equals("l") && type.equals("client")){
                                                 Intent intent = new Intent(QueryActivity.this,UserHome.class);
                                                 startActivity(intent);
                                                 finish();
@@ -49,6 +46,14 @@ public class QueryActivity extends Activity {
                                                 startActivity(intent);
                                                 finish();
                                             }
+                                            else
+                                                {
+
+                                                Intent intent = new Intent(QueryActivity.this, prev_query.class);
+                                                startActivity(intent);
+                                                finish();
+
+                                                 }
                                         }
 
 
@@ -63,6 +68,52 @@ public class QueryActivity extends Activity {
                 finish();
             }
         });
+        bt3 = findViewById(R.id.button3);
+        bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                ParseUser parseUser = ParseUser.getCurrentUser();
+                String flag = parseUser.getString("flag");
+                String type1 = parseUser.getString("type1");
+
+                /* if(  type1.equals("doctor"))
+                 {
+                    Intent intent = new Intent(QueryActivity.this,DoctorProfile.class);
+                    startActivity(intent);
+                    finish();
+                }
+                else if(  type1.equals("patient")){
+                    Intent intent = new Intent(QueryActivity.this, PatientSignUp.class);
+                    startActivity(intent);
+                    finish();
+                }*/
+               // else
+                    //{
+                    Intent intent = new Intent(QueryActivity.this, HealthSignUp.class);
+                    startActivity(intent);
+                    finish();
+               // }
+               /* Intent intent = new Intent(QueryActivity.this, HealthSignUp.class);
+                startActivity(intent);
+                finish();*/
+            }
+        });
+
+
+        button4=findViewById(R.id.button4);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(QueryActivity.this,Sentiment_home.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+
 
 
     }
